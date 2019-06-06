@@ -1,0 +1,29 @@
+Castlegate Terminal Blocks and I/O Panel Wiring 5/23/2018
+
+TB	Use	East Det	West Det
+-----------------------------------------------------------------------------
+CGTB01-01	CG Track 1	0x010F	0x010E
+CGTB01-02	CG Track 2	0x010D	0x010C
+CGTB01-03	CG Track 3	0x010B	0x010A
+CGTB01-04	CG Track 4	0x0109	0x0108
+CGTB01-05	CG Track 5	0x0107	0x0106
+CGTB01-06	CG Track 6	0x0105	0x0104
+CGTB01-07	CG Track 7	0x0103	0x0102
+CGTB01-08	CG Track 8	0x0101	0x0100
+CGTB01-09	CG Track 9	0x011F	0x011E
+CGTB01-10	CG Track 10	0x011D	0x011C
+CGTB02-01	CG Track Lead A	0x011B	0x011A
+CGTB02-02	CG Track Lead B	0x0119	0x0118
+CGTB02-03	CG Track WC1	0x0117	0x0116
+CGTB02-04	CG Track WC2	0x0115	0x0114
+CGTB02-05	CG Track Helix	0x0113	0x0112
+CGTB02-06	n/c (Helix 2?)	0x0111	0x0110
+CGTB02-07	GND
+CGTB02-08	Throttle IN
+CGTB02-09	+24V Relays
+CGTB02-10	+12V Detectors
+
+Locations:
+-----------------------
+CGTB01  Right Middle
+CGTB02  Right Middle

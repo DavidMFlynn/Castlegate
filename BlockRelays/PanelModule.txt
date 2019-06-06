@@ -1,0 +1,62 @@
+Panel Module Connections
+==========================================================================================
+
+physical layout
+
+
+
+ A                               A
+L10          a      b           L12
+ K           f      Com          K
+             g      c
+             e      dp+
+             d      dp-
+
+ A   A  A  A  A  A  A  A  A  A   A
+L15 L1 L2 L3 L4 L5 L6 L7 L8 L9  L16
+ K   K  K  K  K  K  K  K  K  K   K
+R/G  W  G  R  W  G  R  W  G  R  R/G 
+ 
+ A                               A
+L11                             L13
+ K                               K
+ 
+ 
+Lights
+===============
+White (Owned and Occupied) L1 15, L4 13, L7 27
+Green (Owned)              L2 16, L5 24, L8 26
+Red (Occupied)             L3 17, L6 25, L9 23
+L15 AK 10, 11*, 01*
+L15 KA 10*, 11, 01
+L16 AK 10*, 11*, 01
+L16 KA 10, 11, 01*
+
+Outputs by Number
+===================================
+00 L12 A (optional)
+01 L16 A
+02 L13 A (optional)
+03 L9  A Red
+04 L5  A Green
+05 L6  A Red
+06 L8  A Green
+07 L7  A White
+
+10 L15 A
+11 L15 K, L16 K
+12 L11 A  (optional)
+13 L4  A White
+14 L10 A  (optional)
+15 L1  A White
+16 L2  A Green
+17 L3  A Red
+
+20 Segment a
+21 Segment b
+22 Segment c
+23 dp
+24 Segment d
+25 Segment e
+26 Segment g
+27 Segment f

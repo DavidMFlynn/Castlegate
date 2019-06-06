@@ -1,0 +1,224 @@
+Castlegate Relay Panel Wiring 12/20/2017
+Generic Relay Board 16
+
+Relay #	Track Name	Address	J1 Pin
+------------------------------------------------------------------------------
+Rly 1	CG Track 1	0x0000	1
+Rly 2	CG Track 2	0x0001	2
+RLY 3	CG Track 3	0x0002	3
+RLY 4	CG Track 4	0x0003	4
+RLY 5	CG Track 5	0x0004	5
+RLY 6	CG Track 6	0x0005	6
+RLY 7	CG Track 7	0x0006	7
+RLY 8	CG Track 8	0x0007	8
+RLY 9	CG Track 9	0x000F	16
+RLY 10	CG Track 10	0x000E	15
+RLY 11	CG Track Lead A	0x000D	14
+RLY 12	CG Track Lead B	0x000C	13
+RLY 13	WC1	0x000B	12
+RLY 14	WC2	0x000A	11
+RLY 15	Helix	0x0009	10
+RLY 16	unused	0x0008	9
+
+J2 Pin	Usage
+---------------------------------------------------------------------
++24	+24VDC
+16	Throttle NR
+17	Block Detector +12VDC
+18	Block CG1 NR
+19	Block CG2 NR
+20	Block CG3 NR
+21	Block CG4 NR
+22	Block CG5 NR
+23	Block CG6 NR
+24	Block CG7 NR
+25	Block CG8 NR
+26	Block CG9 NR
+27	Block CG10 NR
+28	Block CG Lead A NR
+29	Block CG Lead B NR
+30	
+
+J3 Pin	Usage
+------------------------------------------------------------------------
++24	+24VDC
+1	Throttle NR
+2	Block Detector +12VDC
+3	
+4	
+5	
+6	
+7	
+8	
+9	
+10	
+11	
+12	
+13	
+14	
+15	
+
+NR = North Rail
+SR = South Rail
+TG = Track Ground
+
+Relay 1	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG1 NR to J2.18
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 2	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG2 NR to J2.19
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 3	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG3 NR to J2.20
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 4	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG4 NR to J2.21
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 5	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG5 NR to J2.22
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 6	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG6 NR to J2.23
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 7	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG7 NR to J2.24
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 8	Connection	
+------------------------------------------------------------------
+1N	820Ω to J2.17 +12VDC
+1C	Block CG8 NR to J2.25
+1R	Throttle NR to J2.16
+
+2N	
+2C	
+2R	
+
+Relay 9	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	Block CG9 NR to J2.26
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 10	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	Block CG10 NR to J2.27
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 11	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	Block Lead A NR to J2.28
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 12	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	Block Lead B NR to J2.29
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 13	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	WC1 J3.3
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 14	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	WC2 J3.4
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 15	Connection	
+------------------------------------------------------------------
+1N	820Ω to J3.2 +12VDC
+1C	Helix J3.5
+1R	Throttle NR to J3.1
+
+2N	
+2C	
+2R	
+
+Relay 16	Connection	
+------------------------------------------------------------------
+1N	
+1C	
+1R	
+
+2N	
+2C	
+2R	
+

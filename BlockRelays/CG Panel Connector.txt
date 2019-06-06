@@ -1,0 +1,41 @@
+Castlegate Control Panel 37 Pin AMP Connector
+
+Pin#	Description
+==========================================================================================
+1	Ground White 16AWG
+2	Ground White 16AWG
+3	+12V Orange 18AWG
+4	+12V Orange 18AWG
+5	Ethernet (RJ-45 pin 1 Wht/Orn)
+6	Ethernet (RJ-45 pin 2 Orn)
+7	Ethernet (RJ-45 pin 3 Wht/Grn)
+8	Ethernet (RJ-45 pin 6 Grn)
+9	
+10	DMFE Bus D0  (1 Blk, 24AWG)
+11	DMFE Bus D1  (3 Brn, 24AWG)
+12	DMFE Bus D2  (5 Red, 24AWG)
+13	DMFE Bus D3  (7 Orn, 24AWG)
+14	DMFE Bus D4  (9 Yel, 24AWG)
+15	DMFE Bus D5  (11 Grn, 24AWG)
+16	DMFE Bus D6  (13 Blu, 24AWG)
+17	DMFE Bus D7  (15 Vlt, 24AWG)
+18	DMFE Bus A0  (2 Gry, 24AWG)
+19	DMFE Bus A1  (4 Wht, 24AWG)
+20	DMFE Bus A2  (6 Brn, 24AWG)
+21	DMFE Bus R/W* (8 Orn, 24AWG)
+22	DMFE Bus Sel0* (10 Blu, 24AWG)
+23	DMFE Bus GND (12 Vlt, 24AWG)
+24	DMFE Bus GND (14 Gry, 24AWG)
+25	DMFE Bus GND (16 Wht, 24AWG)
+26	
+27	
+28	
+29	
+30	
+31	
+32	
+33	
+34	ON Switch Com (Brn, 24AWG)
+35	ON Switch N.O. (Orn, 24AWG)
+36	OFF Switch Com (Blu, 24AWG)
+37	OFF Switch N.C. (Gry, 24AWG)

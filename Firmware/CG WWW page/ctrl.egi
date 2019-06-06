@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="5,URL=ctrl.egi">
+</head>
+<body bgcolor="white" text="black">
+<table border="4" cellpadding="6" cellspacing="2" width="340">
+<tr>
+<td><form action="cgibin.html" method="get"><input name="a" type="hidden" value="6"><input type="submit" value="S/R"></form></td>
+<td><form action="cgibin.html" method="get"><input name="a" type="hidden" value="7"><input type="submit" value="Prev."></form></td>
+<td colspan="4"><big><PRE>@c
+@d
+@e
+@f</PRE></big></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><form action="cgibin.html" method="get"><input name="a" type="hidden" value="2"><input type="submit" value="Next"></form></td>
+<td><form action="cgibin.html" method="get"><input name="b" type="hidden" value="@g"><input name="a" type="hidden" value="3"><input type="submit" value="SW3"></form></td>
+<td><form action="cgibin.html" method="get"><input name="b" type="hidden" value="@g"><input name="a" type="hidden" value="4"><input type="submit" value="SW4"></form></td>
+<td><form action="cgibin.html" method="get"><input name="b" type="hidden" value="@g"><input name="a" type="hidden" value="5"><input type="submit" value="SW5"></form></td>
+</tr>
+</table>
+</body>
+</html>

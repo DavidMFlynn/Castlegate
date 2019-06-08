@@ -1,7 +1,7 @@
 Castlegate Control Panel 37 Pin AMP Connector
 
 Pin#	Description
-==========================================================================================
+=====================================================================================
 1	Ground White 16AWG
 2	Ground White 16AWG
 3	+12V Orange 18AWG
@@ -39,3 +39,26 @@ Pin#	Description
 35	ON Switch N.O. (Orn, 24AWG)
 36	OFF Switch Com (Blu, 24AWG)
 37	OFF Switch N.C. (Gry, 24AWG)
+
+RJ-45 
+=================
+1	Wht/Orn
+2	Orn
+3	Wht/Grn
+4	Blu
+5	Wht/Blu
+6	Grn
+7	Wht/Brn
+8	Brn
+
+  ____________
+  |          |
+1 | |||||||| | 8
+  |          |
+  |          |
+  |          |
+  |          |
+  |__________|
+       ||
+       ||
+       ||

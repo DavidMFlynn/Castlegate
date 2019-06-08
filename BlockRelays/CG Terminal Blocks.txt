@@ -1,4 +1,4 @@
-Castlegate Terminal Blocks and I/O Panel Wiring 5/23/2018
+Castlegate Terminal Blocks and I/O Panel Wiring 6/8/2019
 
 TB	Use	East Det	West Det
 -----------------------------------------------------------------------------
@@ -12,6 +12,7 @@ CGTB01-07	CG Track 7	0x0103	0x0102
 CGTB01-08	CG Track 8	0x0101	0x0100
 CGTB01-09	CG Track 9	0x011F	0x011E
 CGTB01-10	CG Track 10	0x011D	0x011C
+
 CGTB02-01	CG Track Lead A	0x011B	0x011A
 CGTB02-02	CG Track Lead B	0x0119	0x0118
 CGTB02-03	CG Track WC1	0x0117	0x0116
@@ -23,7 +24,95 @@ CGTB02-08	Throttle IN
 CGTB02-09	+24V Relays
 CGTB02-10	+12V Detectors
 
+TB	Use
+-----------------------------------------------------------
+CGTB03-01	SM24VDC	Power Relay CGRLY01-6 2R
+CGTB03-02	RLY24FVDC	Power Relay CGRLY01-5 1R
+CGTB03-03	Ground
+CGTB03-04	Ground
+CGTB03-05	Track Ground
+CGTB03-06	+12VDC	Power Relay CGRLY01-7 3R
+CGTB03-07	22VAC	Power Relay CGRLY01-8 4R
+CGTB03-08	22VACRTN
+CGTB03-09	DCC Baker Tower Booster Throttle Input
+CGTB03-10	CG Local Throttle Input
+
+
+TB	Use
+-----------------------------------------------------------
+CGTB04-01	Panel Ground	CGTB03-03
+CGTB04-02	Panel +12VDC	Power Relay -11 3C	CG+12VDC
+CGTB04-03	J1-34	RLY24FVDC CGTB03-02
+CGTB04-04	J1-35	Power Relay CGRLY01-14 +Coil
+CGTB04-05	J1-36	Ground
+CGTB04-06	J1-37	Power Relay CGRLY01-13 -Coil
+CGTB04-07	DCC Select 	CGRLY02-13 -Coil (N.O. to GND)
+CGTB04-08	
+CGTB04-09	
+CGTB04-10	
+
+TB	Use
+-----------------------------------------------------------
+CGTB05-01	CGSM24VDC
+CGTB05-02	CGSM24VDC
+CGTB05-03	
+CGTB05-04	
+CGTB05-05	
+CGTB05-06	
+CGTB05-07	22VAC Switched Output to local DC Throttle CGRLY02-01 1N
+CGTB05-08	22VAC Return Switched Output to local DC Throttle CGRLY02-02 2N
+CGTB05-09	DC Throttle +  CGRLY02-03 3N
+CGTB05-10	DC Throttle -  CGRLY02-04 4N
+
+Relay Socket (Top View)
+14 + Coil	12 4C	8 4R	4 4N
+	11 3C	7 3R	3 3N
+	10 2C	6 2R	2 2N
+13 - Coil	9  1C	5 1R	1 1N
+
+Off Switch Com (J1-36) Ground
+Off Switch N.C.(J1-37) Power Relay CGRLY01-13
+On Switch  Com (J1-34) RLY24FVDC
+On Switch  N.O.(J1-35) Power Relay CGRLY01-14
+
+RLY (Power)	Use
+-----------------------------------------------------------
+CGRLY01-01 1N	n/c
+CGRLY01-02 2N	n/c
+CGRLY01-03 3N	n/c
+CGRLY01-04 4N	n/c
+CGRLY01-05 1R	24FVDC Input
+CGRLY01-06 2R	SM24VDC Input
+CGRLY01-07 3R	12VDC Input
+CGRLY01-08 4R	22VAC Input
+CGRLY01-09 1C	CG24FVDC Output
+CGRLY01-10 2C	CGSM24VDC Output
+CGRLY01-11 3C	CG12VDC Output
+CGRLY01-12 4C	CG22VAC Output
+CGRLY01-13 -Coil	CGTB04-06
+CGRLY01-14 +Coil	CGTB04-04, CGRLY01-09
+
+RLY (DCC Select)	Use (Local DC Throttle / Baker Tower DCC Booster)
+-----------------------------------------------------------
+CGRLY02-01 1N	CG22VAC	Local DC Throttle
+CGRLY02-02 2N	CG22VACRTN	Local DC Throttle
+CGRLY02-03 3N	DC Throttle +
+CGRLY02-04 4N	DC Throttle -
+CGRLY02-05 1R	n/c
+CGRLY02-06 2R	n/c
+CGRLY02-07 3R	BT Throttle
+CGRLY02-08 4R	n/c
+CGRLY02-09 1C	CGRLY01-12 4C	CG22VAC
+CGRLY02-10 2C	22VAC Return
+CGRLY02-11 3C	CG Throttle
+CGRLY02-12 4C	Track Ground
+CGRLY02-13 -Coil	DCC Throttle Switch (N.O. to Ground) CGTB04-07
+CGRLY02-14 +Coil	CG24FVDC
+
+
 Locations:
 -----------------------
 CGTB01  Right Middle
 CGTB02  Right Middle
+CGTB03  Right Top
+CGTB04  Right Top 2nd Down

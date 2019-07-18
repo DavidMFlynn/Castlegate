@@ -66,30 +66,98 @@ module BlockSYL(Mode=3D_Mode){
 	translate([-0.3,1.5,0]) BlockModuleCuttout(UnderText="",Has7Seg=true,Mode=Mode);
 } // BlockSYL
 
+//CGWest=true;
+CGWest=false;
+TrackNameText_h= CGWest==true? 0.30:0.25; 
+TrackSpacing_Y= CGWest==true? 1.0:0.7;
 
-
-module BlockLocal(Name="A",StartTerm=false,EndTerm=false,Mode=3D_Mode){
+module BlockLocal(Name="A",StartTerm=false,EndTerm=false, HasBtnMod=true, Mode=3D_Mode){
 	TrackLine(X1=-BlockLineLen,Y1=0,X2=BlockLineLen,Y2=0,StartTerm=StartTerm,EndTerm=EndTerm,Mode=Mode);
-	translate([0,0.45,0]) EngravedText(TheText=Name,X=0,Y=0,Height=0.3,Mode=Mode);
+	translate([0,0.45,0]) EngravedText(TheText=Name,X=0,Y=0,Height=TrackNameText_h,Mode=Mode);
 	
+	if (HasBtnMod==true)
 	translate([0,0.3,0]) BlockModuleCuttout(UnderText="",Has7Seg=false,Mode=Mode);
 } // BlockLocal
 
 module Converge(Mode=3D_Mode){
-		TrackLine(X1=0,Y1=-1,X2=1,Y2=-1,StartTerm=false,EndTerm=false,Mode=Mode);
-		LED_Hole(X=0.6,Y=-1,Mode=Mode);
+		TrackLine(X1=0,Y1=-TrackSpacing_Y,X2=TrackSpacing_Y,Y2=-TrackSpacing_Y,StartTerm=false,EndTerm=false,Mode=Mode);
+		LED_Hole(X=0.6,Y=-TrackSpacing_Y,Mode=Mode);
 		
-		TrackLine(X1=0,Y1=0,X2=1,Y2=-1,StartTerm=false,EndTerm=false,Mode=Mode);
+		TrackLine(X1=0,Y1=0,X2=TrackSpacing_Y,Y2=-TrackSpacing_Y,StartTerm=false,EndTerm=false,Mode=Mode);
 		LED_Hole(X=0.7,Y=-0.7,Mode=Mode);
 } // Converge
 
 module Diverge(Mode=3D_Mode){
-		TrackLine(X1=0,Y1=0,X2=1,Y2=0,StartTerm=false,EndTerm=false,Mode=Mode);
+		TrackLine(X1=0,Y1=0,X2=TrackSpacing_Y,Y2=0,StartTerm=false,EndTerm=false,Mode=Mode);
 		LED_Hole(X=0.4,Y=0,Mode=Mode);
 		
-		TrackLine(X1=0,Y1=0,X2=1,Y2=1,StartTerm=false,EndTerm=false,Mode=Mode);
+		TrackLine(X1=0,Y1=0,X2=TrackSpacing_Y,Y2=TrackSpacing_Y,StartTerm=false,EndTerm=false,Mode=Mode);
 		LED_Hole(X=0.3,Y=0.3,Mode=Mode);
 } // Diverge
+
+// not done
+module CastlegateEast(Mode=3D_Mode){
+	LongCenter_X=-2;
+	
+	Trk8Pos_Y=3;
+	
+	translate([-LongCenter_X-8,Trk8Pos_Y,0]) color("White") Converge(Mode=3D_Mode);
+	
+	translate([-LongCenter_X-8,Trk8Pos_Y,0]) mirror([0,1,0]) color("White") Diverge(Mode=Mode);
+	
+	translate([-LongCenter_X-8.7,Trk8Pos_Y-TrackSpacing_Y,0]) mirror([0,1,0]) color("White") Diverge(Mode=Mode); // WC1/Bypass
+	
+	translate([-LongCenter_X-7.0,Trk8Pos_Y-TrackSpacing_Y,0]) mirror([0,1,0]) color("White") Diverge(Mode=Mode);
+	
+	translate([LongCenter_X,Trk8Pos_Y,0]) color("White") 
+		BlockLocal(Name="CG 8",HasBtnMod=false,Mode=Mode);
+	
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y,0]) color("White") 
+		BlockLocal(Name="CG 7",HasBtnMod=false,Mode=Mode);
+	
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y*2,0]) color("White") 
+		BlockLocal(Name="CG 6",HasBtnMod=false,Mode=Mode);
+	
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y*3,0]) color("White") 
+		BlockLocal(Name="CG 5",HasBtnMod=false,Mode=Mode);
+	
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y*4,0]) color("White") 
+		BlockLocal(Name="CG 4",HasBtnMod=false,Mode=Mode);
+	
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y*5,0]) color("White") 
+		BlockLocal(Name="CG 3",HasBtnMod=false,Mode=Mode);
+		
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y*6,0]) color("White") 
+		BlockLocal(Name="CG 2",HasBtnMod=false,Mode=Mode);
+		
+	translate([LongCenter_X,Trk8Pos_Y-TrackSpacing_Y*7,0]) color("White") 
+		BlockLocal(Name="CG 1",HasBtnMod=false,Mode=Mode);
+		
+	translate([-BlockLineLen-2,Trk8Pos_Y-TrackSpacing_Y*7,0]) mirror([1,0,0]) // Bypass/2
+		color("White") Diverge(Mode=Mode);
+	
+	translate([-BlockLineLen-2.7,Trk8Pos_Y-TrackSpacing_Y*6,0]) mirror([0,1,0]) // 2/1
+		color("White") Diverge(Mode=Mode);
+	
+	translate([-BlockLineLen-3.4,Trk8Pos_Y-TrackSpacing_Y*5,0]) mirror([0,1,0]) // 3/2
+		color("White") Diverge(Mode=Mode);
+
+	translate([-BlockLineLen-4.1,Trk8Pos_Y-TrackSpacing_Y*4,0]) mirror([0,1,0]) // 3/2
+		color("White") Diverge(Mode=Mode);
+		
+	translate([7,2.5,0]) PowerSwitch(Mode=Mode);
+		
+	AlignmentMark(X=-11,Y=-5,Mode=Mode);
+		
+	EngravedText(TheText="Castlegate",X=0,Y=4.9,Height=0.9,Mode=Mode);
+	EngravedText(TheText="East",X=3,Y=3.8,Height=0.3,Mode=Mode);
+
+	PanelOutline(X=-9.75,Y=-4.0,Size_X=19.5,Size_Y=9.5,Mode=Mode);
+
+} // CastlegateEast
+/
+//CastlegateEast(Mode=3D_Mode);
+
 
 module CastlegateWest(Mode=3D_Mode){
 translate([6,-3,0]) {Block171(Mode=Mode);
@@ -172,7 +240,7 @@ translate([-1,2,0]) BlockLocal(Name="Lead B",Mode=Mode);
 } // CastlegateWest
 
 
-
+//CastlegateWest(Mode=3D_Mode);
 
 
 
